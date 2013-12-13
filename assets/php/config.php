@@ -1,19 +1,8 @@
 <?php
 
-	// localhost
 	return array(
 		'host' 			=> "localhost",
-		'dbname' 		=> "eastereggs",
-		'dbuser'		=> "eastereggs_user",
-		'dbpassword'	=> "eastereggs_user_2013!"
+		'dbname' 		=> "DB_NAME",
+		'dbuser'		=> "DB_USER",
+		'dbpassword'	=> "DB_PASSWORD"
 	);
-
-/*
-	// remote
-	return array(
-		'host' 			=> "204.93.172.30",
-		'dbname' 		=> "pimatBra_eastereggs",
-		'dbuser'		=> "pimatBra_egg",
-		'dbpassword'	=> "egg_user_1"
-	);
-*/

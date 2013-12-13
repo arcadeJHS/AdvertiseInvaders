@@ -1,15 +1,24 @@
 Advertise Invaders
 ==============
 An "advertise ready" Space Invaders HTML5 porting.
+Demo on: http://matteopiazza.org/ai
 
-Will become a sub heading
+Save your score
 --------------
+The game saves/loads the best score saved on DB.
+Simple PHP and MySQL scripts are provided to save best score.
+- /source/DB.sql: create a simple DB with a table on which you can save game scores.
+- /assets/php/config.php: configure your DB connection.
 
-*This will be Italic*
+Tweet your score
+--------------
+You can tweet your score on "game over".
 
-**This will be Bold**
+Mobile support
+--------------
+The game is quite ready to be played on a tablet (touch controls will appear).
 
-- This will be a list item
-- This will be a list item
-
-    Add a indent and this will end up as code
+Issues
+--------------
+- No sounds on mobile.
+- Better "resizing" support.
