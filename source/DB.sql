@@ -1,0 +1,18 @@
+CREATE DATABASE  IF NOT EXISTS `DB_NAME` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+USE `DB_NAME`;
+
+
+DROP TABLE IF EXISTS `si_score`;
+
+CREATE TABLE `si_score` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) COLLATE utf8_unicode_ci NULL,
+  `score` int NULL DEFAULT 0,
+  `email` varchar(128) COLLATE utf8_unicode_ci NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+-- DB user creation
+GRANT ALL PRIVILEGES ON DB_NAME.* TO 'DB_USER'@'localhost' IDENTIFIED BY 'DB_PASSWORD';
+FLUSH PRIVILEGES;
