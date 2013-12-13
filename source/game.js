@@ -1,4 +1,9 @@
-/*https://github.com/arcadeJHS/HTML5-Space-Invaders */
+/*
+Licensed under a Creative Commons Attribution - Share Alike 3.0 - Unported license (CC BY-SA 3.0). 
+The text of the license is available at http://creativecommons.org/licenses/by-sa/3.0/
+
+https://github.com/arcadeJHS/AvertiseInvaders 
+*/
 
 (function() {
 
