@@ -1,7 +1,7 @@
 Advertise Invaders
 ==============
 An "advertise ready" Space Invaders HTML5 porting.
-Demo on: http://matteopiazza.org/ai
+Demo on: http://matteopiazza.org/stuff/code/AdvertiseInvaders
 
 Save your score
 --------------
