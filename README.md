@@ -18,7 +18,7 @@ Arduino joystick support
 --------------
 Added support for **joystickIno**. Check: https://github.com/arcadeJHS/joystickIno
 
-Just replace the address at code line **new WebSocket("ws://localhost:8000")**
+Just replace the address at code line: **new WebSocket("ws://localhost:8000")**
 
 Browser support
 --------------
