@@ -1,4 +1,9 @@
-/*https://github.com/arcadeJHS/HTML5-Space-Invaders */
+/*
+Licensed under a Creative Commons Attribution - Share Alike 3.0 - Unported license (CC BY-SA 3.0). 
+The text of the license is available at http://creativecommons.org/licenses/by-sa/3.0/
+
+https://github.com/arcadeJHS/AvertiseInvaders 
+*/
 
 (function() {
 
@@ -1192,19 +1197,23 @@
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		var keyPressed = function(e) {
 			if(!e) e = window.event;
-			switch (e.keyCode)
+			inputHandler(e.keyCode, e.type);
+		};
+		
+		function inputHandler(code, type) {
+			switch (code)
 			{
 				case 37:	// left arrow
-					human.moveCannon = (e.type == "keyup") ? "N" : "L"; 
+					human.moveCannon = (type == "keyup") ? "N" : "L"; 
 					break;
 				case 39:	// right arrow
-					human.moveCannon = (e.type == "keyup") ? "N" : "R"; 
+					human.moveCannon = (type == "keyup") ? "N" : "R"; 
 					break;
 				case 32:	// spacebar									
-					human.cannonFire = (e.type == "keyup") ? false : true;
+					human.cannonFire = (type == "keyup") ? false : true;
 					break;
 			}
-		};
+		}
 		
 		var gameLoop = function() {
 			context.clearRect(0, 0, canvas.width, canvas.height);
@@ -1632,6 +1641,19 @@
 		window.addEventListener("keydown", keyPressed, true);
 		window.addEventListener("keyup", keyPressed, true);
 		window.addEventListener("resize", resizeCanvas, true);
+		
+		
+		/*
+			Control the game with your Arduino joystick.
+			Check: https://github.com/arcadeJHS/joystickIno
+		*/
+		var ws = new WebSocket("ws://localhost:8000");	// modify ws address to connect to the right websocket server
+		ws.addEventListener('open', function() {
+			ws.addEventListener('message', function(e) {
+				var data = JSON.parse(e.data);
+				inputHandler(data.code, data.type)
+			});
+		});
 		
 		initGame();
 		
