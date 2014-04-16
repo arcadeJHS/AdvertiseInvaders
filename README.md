@@ -1,7 +1,7 @@
 Advertise Invaders
 ==============
 An "advertise ready" Space Invaders HTML5 porting.
-Demo on: http://matteopiazza.org/ai
+Demo on: http://matteopiazza.org/stuff/code/AdvertiseInvaders
 
 Save your score
 --------------
@@ -14,9 +14,11 @@ Tweet your score
 --------------
 You can tweet your score on "game over".
 
-Mobile support
+Browser support
 --------------
-The game is quite ready to be played on a tablet (touch controls will appear).
+Tested on Chrome, Firefox, Opera, IE10 (pretty good on IE9).
+The game is quite ready to be played on a tablet (touch controls will appear) - tested on an iPad mini.
+
 
 Issues
 --------------
