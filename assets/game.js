@@ -1647,7 +1647,8 @@ https://github.com/arcadeJHS/AvertiseInvaders
 			Control the game with your Arduino joystick.
 			Check: https://github.com/arcadeJHS/joystickIno
 		*/
-		var ws = new WebSocket("ws://localhost:8000");	// modify ws address to connect to the right websocket server
+		// modify ws address to connect to the right websocket server
+		var ws = new WebSocket("ws://localhost:8000");	
 		ws.addEventListener('open', function() {
 			ws.addEventListener('message', function(e) {
 				var data = JSON.parse(e.data);
