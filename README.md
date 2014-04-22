@@ -16,9 +16,15 @@ You can tweet your score on "game over".
 
 Arduino joystick support
 --------------
-Added support for **joystickIno**. Check: https://github.com/arcadeJHS/joystickIno
+Added support for **joystickIno**. Check: https://github.com/arcadeJHS/joystickIno.
 
-Just replace the address at code line: **new WebSocket("ws://localhost:8000")**
+Check and replace the configuration at:
+```
+JYI.config({
+	inputHandler: joystickHandler,
+	wsAddress: "ws://localhost:8000"
+});
+```
 
 Browser support
 --------------
