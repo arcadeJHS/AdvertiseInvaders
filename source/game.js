@@ -1195,21 +1195,32 @@ https://github.com/arcadeJHS/AvertiseInvaders
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		// game 
 		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		var keys = {
+			left: 37,
+			right: 39,
+			fire: 32
+		};
+		
+		// keyboard handler
 		var keyPressed = function(e) {
 			if(!e) e = window.event;
 			inputHandler(e.keyCode, e.type);
 		};
 		
+		// joystick handler
+		function joystickHandler(button) {			
+			inputHandler(keys[button.command], "key"+button.type);
+		}
+		
 		function inputHandler(code, type) {
-			switch (code)
-			{
-				case 37:	// left arrow
+			switch (code) {
+				case keys.left:	// left arrow
 					human.moveCannon = (type == "keyup") ? "N" : "L"; 
 					break;
-				case 39:	// right arrow
+				case keys.right:	// right arrow
 					human.moveCannon = (type == "keyup") ? "N" : "R"; 
 					break;
-				case 32:	// spacebar									
+				case keys.fire:	// spacebar									
 					human.cannonFire = (type == "keyup") ? false : true;
 					break;
 			}
@@ -1647,13 +1658,9 @@ https://github.com/arcadeJHS/AvertiseInvaders
 			Control the game with your Arduino joystick.
 			Check: https://github.com/arcadeJHS/joystickIno
 		*/
-		// modify ws address to connect to the right websocket server
-		var ws = new WebSocket("ws://localhost:8000");	
-		ws.addEventListener('open', function() {
-			ws.addEventListener('message', function(e) {
-				var data = JSON.parse(e.data);
-				inputHandler(data.code, data.type)
-			});
+		JYI.config({
+			inputHandler: joystickHandler,
+			wsAddress: "ws://localhost:8000"
 		});
 		
 		initGame();
