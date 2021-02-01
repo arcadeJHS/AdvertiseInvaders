@@ -1,7 +1,7 @@
 Advertise Invaders
 ==============
 An "advertise ready" Space Invaders HTML5 porting.
-Please, play a demo on: dvertiseInvaders/index.html
+Please, play a demo on: [http://arcadejhs.github.io/AdvertiseInvaders/index.html](http://arcadejhs.github.io/AdvertiseInvaders/index.html)
 
 Save your score
 --------------
