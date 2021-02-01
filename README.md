@@ -1,12 +1,12 @@
 Advertise Invaders
 ==============
 An "advertise ready" Space Invaders HTML5 porting.
-Demo on: http://matteopiazza.org/stuff/code/AdvertiseInvaders
+Please, play a demo on: dvertiseInvaders/index.html
 
 Save your score
 --------------
 The game saves/loads the best score saved on DB.
-Simple PHP and MySQL scripts are provided to save best score.
+Simple PHP and MySQL scripts are provided to save best score (unfortunately in the online demo, hosted on github pages, the PHP script is not active).
 - /source/DB.sql: create a simple DB with a table on which you can save game scores.
 - /assets/php/config.php: configure your DB connection.
 
